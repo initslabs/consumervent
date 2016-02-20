@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <header>
     <div class="container">
         <div class="header-logo" id="header-logo">
-            <img src="<?php echo Route::url('/', true) ?>img/logo.fw.png" alt>
+            <img src="<?php echo Router::url('/', true) ?>img/logo.fw.png" alt>
         </div>
         <nav>
             <ul class"hd-list-menu">
