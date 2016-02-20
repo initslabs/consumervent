@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "MagallanesBlack.otf";
+    src: url("../fonts/MagallanesBlack.otf") format("truetype");
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    font-size: 14px;
+    padding-top: 0px;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "MagallanesBlack.otf";
+}
+
+.main-body-container {
+    background: #ffffff;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 999;
+}
+
+.header-content {
+    /* height: 400px; */
+    text-align: center;
+    position: relative;
+    z-index: 200;
+    display: block;
+    vertical-align: middle;
+    width: 50%;
+    margin: 0 auto;
+    padding: 180px 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
