@@ -34,8 +34,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap');
+		echo $this->Html->css('animate.min');
 		echo $this->Html->css('stylesheet');
 
+		echo $this->Html->script('jquery.min');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -45,7 +47,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 <div id="main-body-container">
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -90,12 +92,35 @@ echo $this->Html->meta('icon');
 
 echo $this->Html->script('bootstrap');
 echo $this->Html->script('parallax');
-echo $this->Html->script('script');
+echo $this->Html->script('smoothscroll');
+echo $this->Html->script('waypoints');
+echo $this->Html->script('jquery.counterup.min');
 
 echo $this->fetch('meta');
 echo $this->fetch('css');
 echo $this->fetch('script');
 ?>
+
+<script>
+	$(window).load(function() {
+
+		$('.timer').counterUp({
+			delay: 20,
+			time: 2500
+		});
+
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > $("nav").height()) {
+				$("nav.navbar-slide").addClass("show-menu");
+			} else {
+				$("nav.navbar-slide").removeClass("show-menu");
+		//			$(".navbar-slide .navMenuCollapse").collapse({toggle: false});
+		//			$(".navbar-slide .navMenuCollapse").collapse("hide");
+		//			$(".navbar-slide .navbar-toggle").addClass("collapsed");
+			}
+		});
+	});
+</script>
 
 
 </body>

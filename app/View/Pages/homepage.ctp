@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                <form action="#">
+                <form action="#" class="animated fadeInDown">
                     <div class="input-group">
                         <input class="btn btn-lg" name="email" id="text" type="text" placeholder="Enter Company/Organization Name" required>
                         <button class="btn btn-info btn-lg" type="submit">
@@ -26,8 +26,51 @@
                         </button>
                     </div>
                 </form>
+                <div>
+                    <p class="pull-right" style="font-weight: 600;    font-size: 12px;">
+                        <a href="#">Company/Organization Name Not Listed? </a>
+                    </p>
+                    <div style="clear: both"></div>
+                </div>
             </div>
+            <div style="clear: both"></div>
 
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="uk-width-large-1-1">
+        <div class="text-center">
+            <div id="counter">
+                <ul>
+                    <li>
+                        <p class="animated fadeInDown">
+                            <span class="timer">86</span>
+                            <small>compliances</small>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="animated fadeInDown">
+                            <span class="timer">234</span>
+                            <small>Followers</small>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="animated fadeInDown">
+                            <span class="timer">86</span>
+                            <small>Responses</small>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div>
+
+    </div>
+    </div>
+

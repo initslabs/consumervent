@@ -114,3 +114,44 @@ button.btn {
 .promise {
     color: #999;
 }
+
+#counter {
+    padding:80px 0;
+}
+#counter ul li p span {
+    display: block;
+    font-size: 31px;
+    line-height: 30px;
+    font-weight: 800;
+    color: #555;
+    font-family: Roboto,sans-serif;
+}
+#counter ul li {
+    text-align: center;
+    display: inline-block;
+    padding: 0 50px;
+    border-right: 1px solid #f0f0f0;
+}
+
+#counter ul li:last-child {
+    border-right: 0px solid #f0f0f0;
+}
+
+#counter ul li p small {
+    font-size: 12px!important;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #333;
+}
+
+.parallax-slider {
+    top: -8px;
+}
+
+.show-menu {
+    background-color: #3e4651 !important;
+    opacity: 0.8;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
