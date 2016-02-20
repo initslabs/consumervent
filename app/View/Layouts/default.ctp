@@ -66,16 +66,25 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Link</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
+
+					<li class="login"><a href="#"> Log In </a></li>
+					<li class="user-login">
+						<span>
+							<img src="<?php echo Router::url('/', true) ?>img/customer-photo.jpg">
+						</span>
+						<a class="username" href="#"> Olatunde D. </a>
 					</li>
+
+<!--					<li class="dropdown">-->
+<!--						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+<!--						<ul class="dropdown-menu">-->
+<!--							<li><a href="#">Action</a></li>-->
+<!--							<li><a href="#">Another action</a></li>-->
+<!--							<li><a href="#">Something else here</a></li>-->
+<!--							<li role="separator" class="divider"></li>-->
+<!--							<li><a href="#">Separated link</a></li>-->
+<!--						</ul>-->
+<!--					</li>-->
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->

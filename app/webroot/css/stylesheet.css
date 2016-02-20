@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 900;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
@@ -154,4 +154,26 @@ button.btn {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+li.user-login span img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+}
+li.user-login .username {
+    padding: 0px;
+    display: inline-block;
+}
+
+.user-login {
+    padding: 10px;
+}
+
+.login a {
+    padding: 4px 22px! important;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 2px solid #fff;
 }
