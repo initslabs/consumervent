@@ -297,3 +297,32 @@ footer {
     color: #fff;
     border-color: #728EAA;
 }
+
+.header-content .h1 {
+    font-size: 61px;
+    text-shadow: 1px 1px #CFCFCF;
+    color: #494E52;
+    font-family: "MagallanesBlack";
+}
+
+.next-btn {
+    width: 100%! important;
+    border-top-right-radius: 4px! important;
+    border-bottom-right-radius: 4px! important;
+    border-bottom-right-radius: 4px! important;
+    text-transform: uppercase;
+}
+
+.header-top {
+    background: url("../img/background3.png");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 55px;
+}
+
+.p_header {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+}
