@@ -331,3 +331,9 @@ footer {
     font-weight: 500;
     color: #555;
 }
+
+.btn-info {
+    color: #fff;
+    background-color: #6E8AA6;
+    border-color: #738A9F;
+}

@@ -1,6 +1,4 @@
 
-
-
 <div>
     <div>
         <div>
@@ -11,14 +9,8 @@
                  data-speed="0.2"
                  data-image-src="<?php echo Router::url('/', true) ?>img/background2.png"></div>
             <div class="header-content" >
-                <h1> Get Your Voice Heard </h1>
+                <h1> Get Access </h1>
            </div>
-
-            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-
-            </div>
-            <div style="clear: both"></div>
-
         </div>
     </div>
 </div>
