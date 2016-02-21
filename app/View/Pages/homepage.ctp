@@ -9,7 +9,7 @@
                  data-bleed="10"
                  data-position="top"
                  data-speed="0.2"
-                 data-image-src="<?php echo Router::url('/', true) ?>img/bacjkground.png"></div>
+                 data-image-src="<?php echo Router::url('/', true) ?>img/background.png"></div>
             <div class="header-content">
                 <h1> Get Your Voice Heard </h1>
                 <p> Conveniently engage cross functional internal or "organic" sources without virtual testing procedures. Appropriately actualize dynamic infrastructures. </p>

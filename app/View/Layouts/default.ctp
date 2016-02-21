@@ -30,6 +30,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,900italic,700italic,700,300,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Palanquin:700,400' rel='stylesheet' type='text/css'>
 	<?php
 		echo $this->Html->meta('icon');
 
@@ -57,7 +58,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="<?php echo $this->Html->url('/'); ?>">
 					<img src="<?php echo Router::url('/', true) ?>img/logo.fw.png" alt="ConsumerVent" style="width: 207px;">
 				</a>
 			</div>
@@ -67,7 +68,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Link</a></li>
 
-					<li class="login"><a href="#"> Log In </a></li>
+					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
 					<li class="user-login">
 						<span>
 							<img src="<?php echo Router::url('/', true) ?>img/customer-photo.jpg">
@@ -102,6 +103,26 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 	</div>
+
+    <footer id="footer-center" class="text-center bg-color1 dark-bg">
+        <div class="container text-center">
+            <ul class="soc-list" style="
+    margin: 0px;
+    padding: 0;
+    margin-bottom: 32px;
+">
+                <li><a href="#" target="_blank"><i class="icon fa fa-google-plus"></i></a></li>
+                <li><a href="#" target="_blank"><i class="icon fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="icon fa fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="icon fa fa-linkedin"></i></a></li>
+            </ul>
+            <div>
+                <div>
+                    <img src="<?php echo Router::url('/', true) ?>img/logo.fw.png" alt="ConsumerVent" style="width: 163px;opacity: 0.2;">
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 <?php

@@ -2,6 +2,10 @@
     font-family: "MagallanesBlack";
     src: url("../fonts/MagallanesBlack.otf") format("truetype");
 }
+@font-face {
+    font-family: "Palanquin";
+    src: url("../fonts/Palanquin/Palanquin-Bold.ttf") format("truetype"); }
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -51,9 +55,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
-    font-weight: 900;
+    font-family: 'Palanquin', sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
+    text-shadow: 1px 1px #555;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .centered-form{
@@ -115,6 +121,10 @@ button.btn {
 
 #counter {
     padding:80px 0;
+    padding: 63px 38px;
+
+    padding: 63px 38px 38px;
+    margin-top: 80px;
 }
 #counter ul li p span {
     display: block;
@@ -183,4 +193,95 @@ li.user-login .username {
 
 .actions {
 background: #728EAA;
+}
+
+.nav-tabs a {
+    text-align: center;
+    font-family: "MagallanesBlack";
+    font-size: 23px;
+}
+
+.nav-tabs a span {
+    text-align: center;
+    display: block;
+    font-weight: 800;
+    font-family: Roboto,sans-serif;
+    font-size: 23px;
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.social p {
+    font-family: 'Palanquin', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    border: 0px solid;
+    color: #fff;
+}
+.google {
+    background: #dd4b39;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+.facebook {
+    background: #3b5998;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+.twitter {
+    background: #00aced;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.style {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.social p i {
+    font-size: 14px;
+    margin-right: 10px;
+}
+.bg-color1 {
+    background-color: #252830;
+}
+.dark-bg {
+    color: #fff;
+}
+.text-center {
+    text-align: center;
+}
+.soc-list li {
+    display: inline-block;
+    margin: 10px 0;
+}
+footer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.dark-bg .soc-list .icon {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.soc-list .icon {
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 10px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
