@@ -1,6 +1,5 @@
 # CakePHP 3
 
-/vendor/*
 /config/app.php
 /tmp/*
 /logs/*
@@ -10,4 +9,3 @@
 /app/tmp/*
 /app/Config/core.php
 /app/Config/database.php
-/vendors/*
