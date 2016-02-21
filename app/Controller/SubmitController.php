@@ -42,7 +42,7 @@ class SubmitController extends AppController {
 			
 			$dbData = [
 				'users_id'=>0,
-				'submission_status_id'=>$this->SubmissionStatus->STATUS_PENDING,//pending
+				'submission_status_id'=>1,//pending
 				'company_id'=>0,
 				'experience_type_id'=>$submittedData['experience_type_id'],
 				'submission_type_id'=>0,
@@ -72,6 +72,9 @@ class SubmitController extends AppController {
 	}
 	
 	function previewSubmission(){//
+		
+		//require login
+		
 		
 		
 		
