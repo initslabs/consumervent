@@ -18,9 +18,7 @@ class LoginController extends AppController {
     public function index() {
 
     }
-
-
-
+    
 
     ////**** Social Login *****//
     public function social_login($provider) {
