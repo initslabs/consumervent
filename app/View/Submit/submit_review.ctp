@@ -106,7 +106,7 @@ $radioAttributes = array(
 		  <div class="col-md-5">
 				<p>&nbsp;</p>
 
-				<div id="map"></div>
+				<div id="map" class="invisible"></div>
 		  </div>
 	 </div>
 	 <?php echo $this->Form->end(); ?>
@@ -127,7 +127,7 @@ $radioAttributes = array(
 //						 var types = document.getElementById('type-selector');
 //						 map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 //						 map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
-
+	
            var autocomplete = new google.maps.places.Autocomplete(input);
            autocomplete.bindTo('bounds', map);
            autocomplete.setTypes(['establishment']);
@@ -138,6 +138,7 @@ $radioAttributes = array(
            });
            $('#SubmissionPlaceName').change(function () {
                    $('#SubmissionPlaceWebsite').val("");
+						 $('#map').addClass('invisible');
            });
 
            autocomplete.addListener('place_changed', function () {
@@ -183,11 +184,13 @@ $radioAttributes = array(
                    }
                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
                    infowindow.open(map, marker);
+		
+		$('#map').removeClass('invisible');
            });
 
            // Sets a listener on a radio button to change the filter type on Places
            // Autocomplete.
-           $('#SubmissionPlaceName').removeAttr('readonly');
+    $('#SubmissionPlaceName').removeAttr('readonly');       
    }
 
 </script>

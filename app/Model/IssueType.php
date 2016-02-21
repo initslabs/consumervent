@@ -58,4 +58,9 @@ class IssueType extends AppModel {
 		)
 	);
 
+	
+	function getTypes(){
+		return $this->find('list',['order'=>['IssueType.sort_order'=>'DESC','IssueType.name']]);
+	}
 }
+
