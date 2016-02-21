@@ -66,8 +66,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-
+					<li><a href="<?php echo $this->Html->url('/'); ?>"> Home </a></li>
+					<li><a href="<?php echo $this->Html->url('/'); ?>"> Report </a></li>
 					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
 					<li class="user-login">
 						<span>
@@ -75,25 +75,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						</span>
 						<a class="username dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Olatunde D. </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#"> Edit Account </a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#"> Log Our </a></li>
                         </ul>
-
 					</li>
-
-<!--					<li class="dropdown">-->
-<!--						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-<!--					</li>-->
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -103,7 +89,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 	</div>
-
     <footer id="footer-center" class="text-center bg-color1 dark-bg">
         <div class="container text-center">
             <ul class="soc-list" style="
