@@ -6,7 +6,8 @@ App::uses('AppModel', 'Model');
  * @property Submission $Submission
  */
 class SubmissionStatus extends AppModel {
-
+const STATUS_PENDING = 1;
+const STATUS_SUBMITTED = 2;
 /**
  * Display field
  *

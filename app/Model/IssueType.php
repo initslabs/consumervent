@@ -25,7 +25,7 @@ class IssueType extends AppModel {
 	public $hasMany = array(
 		'Submission' => array(
 			'className' => 'Submission',
-			'foreignKey' => 'submission_type_id',
+			'foreignKey' => 'issue_type_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -37,5 +37,9 @@ class IssueType extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	
+	function getTypes(){
+		return $this->find('list',['order'=>['IssueType.sort_order'=>'DESC','IssueType.name']]);
+	}
 
 }

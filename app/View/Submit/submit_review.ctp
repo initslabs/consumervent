@@ -1,4 +1,15 @@
-
+<?php
+$radioAttributes = array(
+		  'class' => '',
+		  'label' => false,
+		  'type' => 'radio',
+		  'legend' => false,
+		  'before' => '<div class="radio"><label>',
+		  'after' => '</label></div>',
+		  'separator' => '</label></div><div class="radio"><label>',
+		  'required'
+);
+?>
 <style>
 	 #map {
 		  height: 300px;
@@ -6,12 +17,11 @@
 	 }
 
 
-	 #SubmissionPlaceName {
+	 #SubmissionPlaceName,#SubmissionPlaceWebsite {
 		  background-color: #fff;
 		  font-family: Roboto;
 		  font-size: 15px;
 		  font-weight: 300;
-		  margin-left: 12px;
 		  padding: 0 11px 0 13px;
 		  text-overflow: ellipsis;
 		  width: 100%;
@@ -42,52 +52,53 @@
 		  padding-left:6px;
 		  font-weight:normal;
 	 }
-	
+
 </style>
 <div class="container">
 	 <h2>Submit Review</h2>
 	 <?php echo $this->Form->create('Submission'); ?>
-	 
+
 	 <div class="row">
 		  <div class="col-md-6">
 
 				<h3>Company/Service Information</h3>
-				<?php echo $this->Form->input('place_name', ['class' => 'form-control controls', 'label' => false, 'type' => 'text', 'placeholder' => "Enter the name of the establishment and location", 'required', 'autocomplete' => "off", 'readonly']); ?>
-				<?php echo $this->Form->hidden('place_details', ['class' => 'form-control', 'label' => false]); ?>
+				&nbsp;
+				<?php echo $this->Form->input('place_name', ['class' => 'form-control', 'label' => 'Name of Service / Establishment & Location', 'type' => 'text', 'placeholder' => "Enter the name of the establishment and location", 'required', 'autocomplete' => "off", 'readonly']); ?>
+				&nbsp;
+				<?php echo $this->Form->input('place_website', ['class' => 'form-control', 'label' => 'Website of Establishment/Service/Product', 'type' => 'text', 'placeholder' => "Enter the website of the establishment if you know it", 'autocomplete' => "off"]); ?>
 				<?php echo $this->Form->hidden('place_details', ['class' => 'form-control', 'label' => false]); ?>
 				<hr />
 				<h3>Review</h3>
 				<?php
 				echo $this->Form->label('recommendation_level', 'How likely are you to recommend this business to a friend, family member, neighbor or colleague?');
-				echo $this->Form->select('recommendation_level', $recommendationLevels, ['class' => 'form-control','required']);
+				echo $this->Form->select('recommendation_level', $recommendationLevels, ['class' => 'form-control', 'required']);
 				?>
 				<p>&nbsp;</p>
 
 				<div>
 					 <?php
-					 echo $this->Form->label('experience_state', 'How would you rate your experience with this business or service?');
+					 echo $this->Form->label('experience_type_id', 'How would you rate your experience with this business or service?');
 
-					 $attributes = array(
-								'class' => '',
-								'label' => false,
-								'type' => 'radio',
-//            'default'=> 0,
-								'legend' => false,
-								'before' => '<div class="radio"><label>',
-								'after' => '</label></div>',
-								'separator' => '</label></div><div class="radio"><label>',
-								'options' => $experienceRating,
-								'required'
-					 );
 
-					 echo $this->Form->input('experience_state', $attributes);
+					 $radioAttributes['options'] = $experienceTypes;
+					 echo $this->Form->input('experience_type_id', $radioAttributes);
 					 ?>
 				</div>
 				<p>&nbsp;</p>
-				<label>Do you have issues with the service/business you want to report?</label>
-				<?php echo $this->Form->select('service_problems',$experienceRating, ['type' => 'select','multiple'=>'checkbox', 'class' => 'lmargin-label']); ?>
-				
-				<?php echo $this->Form->input('review', ['required','type' => 'textarea', 'class' => 'form-control', 'label' => 'Write your complaint or review']); ?>
+				<label>Do you have issues with the service/business you want to report?
+					 <Br />
+					 <small>Select as many as apply</small></label>
+				<?php echo $this->Form->select('service_problems', $issueTypes, ['type' => 'select', 'multiple' => 'checkbox', 'class' => 'lmargin-label']); ?>
+				<p>&nbsp;</p>
+				<?php echo $this->Form->label('user_company_contacted', 'Have you contacted the company before on this issue?'); ?>
+				<?php
+				$radioAttributes['options'] = [1 => 'Yes', 0 => 'No'];
+				$radioAttributes['default'] = 0;
+				echo $this->Form->input('user_company_contacted', $radioAttributes);
+				?>				
+				<p>&nbsp;</p>
+				<?php echo $this->Form->input('review', ['required', 'type' => 'textarea', 'class' => 'form-control', 'label' => 'Write your complaint or review']); ?>
+
 				<p>&nbsp;</p>
 				<?php echo $this->Form->submit('Next', ['class' => 'btn btn-primary']); ?>
 		  </div>
@@ -124,6 +135,9 @@
            var marker = new google.maps.Marker({
                    map: map,
                    anchorPoint: new google.maps.Point(0, -29)
+           });
+           $('#SubmissionPlaceName').change(function () {
+                   $('#SubmissionPlaceWebsite').val("");
            });
 
            autocomplete.addListener('place_changed', function () {
@@ -163,7 +177,10 @@
                    }
 //						$('#SubmissionPlaceName').val("asdasd");
 //This is illegal in all sorts of ways,but I'm using it like this in the interest of time :)
-                   $('#place-details').val(JSON.stringify(place));
+                   $('#SubmissionPlaceDetails').val(JSON.stringify(place));
+                   if (typeof (place.website) !== 'undefined') {
+                           $('#SubmissionPlaceWebsite').val(place.website);
+                   }
                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
                    infowindow.open(map, marker);
            });
