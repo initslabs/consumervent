@@ -20,8 +20,6 @@ class LoginController extends AppController {
     }
 
 
-
-
     ////**** Social Login *****//
     public function social_login($provider) {
         if($this->Hybridauth->connect($provider)){
