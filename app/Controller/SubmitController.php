@@ -118,7 +118,16 @@ class SubmitController extends AppController {
 			$data['submission_status_id']= 3;//submitted, awaiting notifications
 			$data['users_id']= $this->_thisUserId;//submitted by
 			$expectedFields = ['user_phone_number','user_display_name','user_email_address','submission_status_id','users_id'];
+			$email = filter_var($data['user_email_address'], FILTER_VALIDATE_EMAIL);
+			if(!$email){
+				$this->Session->setFlash("You must provide a valid email for contact purposes");
+				return;
+			}
+			
 			$this->Submission->save($data,false,$expectedFields);
+			
+			$this->_triggerEmailsForSubmission($submissionId);
+			
 			$this->redirect('postSubmission');
 		}
 	}
@@ -141,5 +150,66 @@ class SubmitController extends AppController {
 		$this->set(compact('submissionInfo','submissionIssues'));
 		
 	}
+	
+	
+	function _triggerEmailsForSubmission($submissionId){
+		
+		if (!$this->Submission->exists($submissionId)) {
+			throw new NotFoundException(__('Invalid Review'));
+		}
+		
+		$submissionInfo = $this->Submission->read(null,$submissionId);		
+		
+		$userEmail = $submissionInfo['Submission']['user_email_address'];
+		$mergeVars = array_merge($submissionInfo['Submission'],$submissionInfo['Company']);
+		$mergeVars['mail_title']="Your Vent to {$submissionInfo['Company']['name']}";
+		$link = Router::url("/Submit/viewSubmission/{$submissionInfo['Submission']['id']}",true);
+		$mergeVars['mail_body']="Thank you for using ConsumerVents to submit your review. We have forwarded your vent to {$submissionInfo['Company']['name']} through the contact information we have on file. For record purposes, we have included a link to view the information you submitted below. <Br /><br />$link<br /><br /><br /><br />You can share that link with your friends to get more attention to the issues raised.";
+		try{
+		require_once APP.'Vendor/vendor/autoload.php'; //Not required with Composer
+		$mandrill = new Mandrill('rUNnfXUxdJHJXJSVgWimbg');
+			$template_content = null;
+			$message = array(
+					  'to' => array(
+								 array(
+											'email' => $userEmail,
+											'name' => $userEmail,
+											'type' => 'to'
+								 )
+					  ),
+					  'headers' => array('Reply-To' => 'info@initsconduit.com'),
+					  'merge' => true,
+					  'merge_language' => 'mailchimp',
+					  'global_merge_vars' => array(
+								 array(
+											'name' => 'current_year',
+											'content' => date('Y')
+								 )
+					  ),
+					  'metadata' => array('website' => 'www.consumervents.io'),
+			);
+
+			$message['subject'] = 'ConsumerVents: Your Vent has been sent!';
+
+			foreach ($mergeVars as $name => $content) {
+				$message['global_merge_vars'][] = ['name' => $name, 'content' => $content];
+			}
+
+			$async = false;
+			$result = $mandrill->messages->sendTemplate('generic-email', $template_content, $message, $async);
+			
+			if (!$result || $result[0]['status'] == 'rejected') {
+				//
+			}
+			return $result;
+		} catch (Mandrill_Error $e) {
+			// Mandrill errors are thrown as exceptions
+			
+			exit;
+		}
+		
+		exit;
+	}
+	
 
 }

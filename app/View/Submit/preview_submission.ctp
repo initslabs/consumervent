@@ -83,7 +83,7 @@
 				<tr>
 					 <td>Contact Email (Only shown to company)</td>
 					 <td>
-						  <?php echo $this->Form->input('user_email_address', ['label' => false, 'class' => 'form-control']); ?>
+						  <?php echo $this->Form->input('user_email_address', ['label' => false, 'class' => 'form-control','required']); ?>
 					 </td>
 				</tr>
 				<tr>
