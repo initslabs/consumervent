@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ae302a0-0e4b-4081-8f45-b6c2c6935c1c" name="Default" comment="checking push from phpstorm">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Controller/DashboardController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Dashboard/index.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Dashboard/staffs.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Dashboard/submissions.ctp" />
+    <list default="true" id="4ae302a0-0e4b-4081-8f45-b6c2c6935c1c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/DashboardController.php" afterPath="$PROJECT_DIR$/app/Controller/DashboardController.php" />
     </list>
     <ignored path="consumervent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,13 +28,13 @@
       <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6255144">
-              <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.17695473">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
-                <marker date="1456093282000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
-                <marker date="1456093282000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
-                <marker date="1456093282000" expanded="true" signature="3076:3166" placeholder="SELECT COUNT... submissions" />
-                <marker date="1456093282000" expanded="true" signature="3317:3458" placeholder="SELECT HOUR(... " />
+                <marker date="1456093440000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
+                <marker date="1456093440000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
+                <marker date="1456093440000" expanded="true" signature="3125:3215" placeholder="SELECT COUNT... submissions" />
+                <marker date="1456093440000" expanded="true" signature="3366:3507" placeholder="SELECT HOUR(... " />
               </folding>
             </state>
           </provider>
@@ -439,7 +436,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456062953212</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="checking push from phpstorm">
+      <created>1456093369361</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1456093369361</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -448,6 +451,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20600858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -455,7 +459,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -708,13 +711,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6255144">
-          <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.17695473">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <marker date="1456093282000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
-            <marker date="1456093282000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
-            <marker date="1456093282000" expanded="true" signature="3076:3166" placeholder="SELECT COUNT... submissions" />
-            <marker date="1456093282000" expanded="true" signature="3317:3458" placeholder="SELECT HOUR(... " />
+            <marker date="1456093440000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
+            <marker date="1456093440000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
+            <marker date="1456093440000" expanded="true" signature="3125:3215" placeholder="SELECT COUNT... submissions" />
+            <marker date="1456093440000" expanded="true" signature="3366:3507" placeholder="SELECT HOUR(... " />
           </folding>
         </state>
       </provider>

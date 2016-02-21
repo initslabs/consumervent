@@ -70,7 +70,7 @@ class DashboardController extends AppController
 
         //dd($experience_types);
         $options = array(
-            'conditions'=>null,
+            'conditions' => array('Submission.company_id' => $this->company_id),
             'fields'=>array("COUNT(*) AS 'count'","experience_type_id"),
             'group'=>array("experience_type_id")
         );
