@@ -35,7 +35,12 @@ class User extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'SocialProfile' => array(
+			'className' => 'SocialProfile',
 		)
 	);
+
+
 
 }
