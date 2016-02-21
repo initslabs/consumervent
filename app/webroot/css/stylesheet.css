@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "MagallanesBlack.otf";
+    font-family: "MagallanesBlack";
     src: url("../fonts/MagallanesBlack.otf") format("truetype");
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "MagallanesBlack.otf";
+    font-family: "MagallanesBlack";
 }
 
 .main-body-container {
@@ -33,29 +33,27 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     width: 50%;
     margin: 0 auto;
-    padding: 120px 0 0px 0;
+    padding: 220px 0px 0;
 }
 
 .header-content h1 {
     font-size: 61px;
-    text-shadow: 2px 2px #333;
+    text-shadow: 1px 1px #555;
     color: #fff;
 }
 
 .header-content p {
     font-size: 19px;
-    color: #555;
+    color: #fff;
     /*text-shadow: 2px 1px #333;*/
     font-weight: 500;
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
+    font-size: 11px;
 }
 
 .centered-form{
@@ -123,8 +121,11 @@ button.btn {
     font-size: 31px;
     line-height: 30px;
     font-weight: 800;
-    color: #555;
+    color: #fff;
     font-family: Roboto,sans-serif;
+    text-shadow: 1px 1px #555;
+
+    font-family: "MagallanesBlack";
 }
 #counter ul li {
     text-align: center;
@@ -140,8 +141,9 @@ button.btn {
 #counter ul li p small {
     font-size: 12px!important;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #333;
+    text-shadow: 1px 1px #555;
+    font-weight: 100;
+    color: #fff;
 }
 
 .parallax-slider {
@@ -159,6 +161,7 @@ button.btn {
 li.user-login span img {
     width: 32px;
     height: 32px;
+    margin-right: 10px;
     border-radius: 50%;
     display: inline-block;
 }
@@ -175,5 +178,9 @@ li.user-login .username {
     padding: 4px 22px! important;
     margin-top: 10px;
     border-radius: 50px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
+}
+
+.actions {
+background: #728EAA;
 }

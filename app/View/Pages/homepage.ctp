@@ -28,10 +28,12 @@
                 </form>
                 <div>
                     <p class="pull-right" style="font-weight: 600;    font-size: 12px;">
-                        <a href="#">Company/Organization Name Not Listed? </a>
+                        <a href="#" >Company/Organization Name Not Listed? </a>
                     </p>
                     <div style="clear: both"></div>
                 </div>
+                <br>
+                <br>
             </div>
             <div style="clear: both"></div>
 
@@ -39,6 +41,7 @@
     </div>
 </div>
 
+<div class="actions">
 <div class="container">
     <div class="uk-width-large-1-1">
         <div class="text-center">
@@ -67,10 +70,3 @@
         </div>
     </div>
 </div>
-
-<div class="container">
-    <div>
-
-    </div>
-    </div>
-
