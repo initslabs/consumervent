@@ -37,6 +37,7 @@
 		<?php echo $this->Form->end(); ?>			
                 <div>
                     <p class="pull-right" style="font-weight: 600;font-size: 14px;">
+                        <a href="<?php echo $this->Html->url('/Submit'); ?>" style="color: #fff;">Browse Submissions </a> | 
                         <a href="#" style="color: #fff;">Company/Organization Name Not Listed? </a>
                     </p>
                     <div style="clear: both"></div>
