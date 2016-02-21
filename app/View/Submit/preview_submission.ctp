@@ -132,12 +132,12 @@
                             By submitting this Customer Review, I am representing that it is a truthful account of my
                             experience with the business. I understand that I alone am legally responsible for the truth of
                             what I write.
-                        </p>
-                        <p>
-                            I understand that:<br/>
-                        </p>
-                        <p>
-                            This Customer Review, along with my contact information, will be sent to the business for
+		  </p>
+		  <p>
+				I understand that:<br />
+		  </p>
+		  <p>
+				This Customer Review, along with my contact information, will be sent to the business for validation. 
                             validation.
                         </p>
                         <p>
