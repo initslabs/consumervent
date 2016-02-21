@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 <div id="main-body-container">
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav id="header_navbar" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -141,6 +141,7 @@ echo $this->fetch('script');
 
 <script>
 	$(window).load(function() {
+        var navHeight = $("#header_navbar").height();
 
 		$('.timer').counterUp({
 			delay: 20,
@@ -148,13 +149,15 @@ echo $this->fetch('script');
 		});
 
 		$(window).scroll(function () {
-			if ($(window).scrollTop() > $("nav").height()) {
-				$("nav.navbar-slide").addClass("show-menu");
+			if ($(window).scrollTop() > navHeight) {
+				$("#header_navbar").addClass("show-menu");
+//                console.log('added');
 			} else {
-				$("nav.navbar-slide").removeClass("show-menu");
-		//			$(".navbar-slide .navMenuCollapse").collapse({toggle: false});
-		//			$(".navbar-slide .navMenuCollapse").collapse("hide");
-		//			$(".navbar-slide .navbar-toggle").addClass("collapsed");
+				$("#header_navbar").removeClass("show-menu");
+//                console.log('removed');
+//		//			$(".navbar-slide .navMenuCollapse").collapse({toggle: false});
+//		//			$(".navbar-slide .navMenuCollapse").collapse("hide");
+//		//			$(".navbar-slide .navbar-toggle").addClass("collapsed");
 			}
 		});
 	});

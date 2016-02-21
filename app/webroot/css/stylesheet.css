@@ -109,7 +109,7 @@ input.btn.btn-lg:focus {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-button.btn {
+.search.btn {
     width: 10%;
     height: 60px;
     border-top-left-radius: 0;
@@ -161,7 +161,7 @@ button.btn {
 }
 
 .show-menu {
-    background-color: #3e4651 !important;
+    background-color: #728EAA !important;
     opacity: 0.8;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -284,4 +284,16 @@ footer {
     -ms-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.create {
+    font-family: "MagallanesBlack";
+    margin-top: 55px;
+    background: #728EAA;
+    color: #fff;
+    border-color: #728EAA;
 }
