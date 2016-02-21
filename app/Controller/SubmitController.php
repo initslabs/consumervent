@@ -4,7 +4,17 @@ class SubmitController extends AppController {
 
 	public $uses = ['IssueType','SubmissionStatus','ExperienceType','Company','Submission','SubmissionIssue'];
 	public $_thisUserId=0;
+	public $components = ['Paginator'];
 	function index() {
+		$this->Paginator->settings = [
+				  'order'=>[
+							 'Submission.id'=>'DESC'
+				  ]
+		];
+		$submissions = $this->Paginator->paginate('Submission');
+		
+		$this->set('submissions',$submissions);
+		
 		
 	}
 
@@ -28,7 +38,7 @@ class SubmitController extends AppController {
 			
 		}
 		if (!empty($this->data) && isset($this->data['Submission'])) {
-			
+			if(isset($this->request->data['Submission']['source'])) return;
 			$expectedFields = [
 				'place_name','place_details','recommendation_level','experience_type_id','review'		  
 			];
@@ -118,6 +128,17 @@ class SubmitController extends AppController {
 		
 		$this->Session->write('submission_id',false);
 		
+		
+	}
+	
+	public function viewSubmission($submissionId=0) {
+		if (!$this->Submission->exists($submissionId)) {
+			throw new NotFoundException(__('Invalid Review'));
+		}
+		$submissionInfo = $this->Submission->read(null,$submissionId);
+		$conditions = ['SubmissionIssue.submission_id'=>$submissionId];
+		$submissionIssues = $this->SubmissionIssue->find('all',compact('conditions'));
+		$this->set(compact('submissionInfo','submissionIssues'));
 		
 	}
 
