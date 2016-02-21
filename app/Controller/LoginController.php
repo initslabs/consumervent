@@ -7,12 +7,13 @@
  */
 
 App::uses('AppController', 'Controller');
+//session_start();
 
 
 class LoginController extends AppController {
 
-    public $components = array('Paginator','Session','Hybridauth','RequestHandler');
     public $uses = array('User','SocialProfile');
+    public $components = array('Paginator','Session','Hybridauth','RequestHandler');
 
     public function index() {
 
@@ -27,7 +28,7 @@ class LoginController extends AppController {
             $this->_successfulHybridauth($provider,$this->Hybridauth->user_profile);
         }else{
             $this->Session->setFlash($this->Hybridauth->error,'error');
-            $this->redirect(array('controller' => 'pages', 'action' => 'login'));
+            $this->redirect(array('action' => 'index'));
         }
 
     }

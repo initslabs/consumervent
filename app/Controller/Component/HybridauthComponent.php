@@ -98,6 +98,8 @@ class HybridauthComponent extends Component {
             return true;
 
         } catch (Exception $e) {
+
+
             // Display the recived error
             switch ($e->getCode()) {
                 case 0 : $this->error = "Unspecified error.";
