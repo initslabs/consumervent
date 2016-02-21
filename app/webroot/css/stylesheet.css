@@ -337,3 +337,48 @@ footer {
     background-color: #6E8AA6;
     border-color: #738A9F;
 }
+
+.ft_style {
+    font-weight: 200;
+    font-size: 12px;
+    color: #555;
+}
+
+.devider1:before {
+    background: url(../img/sperter1.png);
+    bottom: 0px;
+    content: "";
+    height: 3px;
+    left: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.more {
+    text-transform: uppercase;
+    font-weight: 100;
+    text-decoration: inherit;
+    font-size: 12px;
+}
+
+.name_style {
+    display: inline-block;
+    border: 1px solid #555;
+    padding: 5px 10px;
+    margin-bottom: 13px;
+    font-size: 10px;
+    border-radius: 1px;
+}
+
+.submit {
+    color: #fff;
+    font-family: 'Palanquin', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    text-align: center;
+    background: #2A679B;
+}

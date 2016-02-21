@@ -67,20 +67,20 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="<?php echo $this->Html->url('/'); ?>"> Home </a></li>
-					<li><a href="<?php echo $this->Html->url('/'); ?>"> Report </a></li>
-					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;"> Submit Review </a></li>
+					<li><a href="<?php echo $this->Html->url('/Submit'); ?>"> Browse Submissions </a></li>
+					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;"> Submit Submissions </a></li>
 					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
-					<li class="user-login">
-						<span>
-							<img src="<?php echo Router::url('/', true) ?>img/customer-photo.jpg">
-						</span>
-						<a class="username dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Olatunde D. </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"> Edit Account </a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#"> Log Our </a></li>
-                        </ul>
-					</li>
+<!--					<li class="user-login">-->
+<!--						<span>-->
+<!--							<img src="--><?php //echo Router::url('/', true) ?><!--img/customer-photo.jpg">-->
+<!--						</span>-->
+<!--						<a class="username dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Olatunde D. </a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a href="#"> Edit Account </a></li>-->
+<!--                            <li role="separator" class="divider"></li>-->
+<!--                            <li><a href="#"> Log Our </a></li>-->
+<!--                        </ul>-->
+<!--					</li>-->
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
