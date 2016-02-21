@@ -68,6 +68,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="<?php echo $this->Html->url('/'); ?>"> Home </a></li>
 					<li><a href="<?php echo $this->Html->url('/'); ?>"> Report </a></li>
+					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;"> Submit Review </a></li>
 					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
 					<li class="user-login">
 						<span>
