@@ -4,8 +4,9 @@ class SubmitController extends AppController {
 
 	public $uses = ['IssueType','SubmissionStatus','ExperienceType','Company','Submission','SubmissionIssue'];
 	public $_thisUserId=0;
+	
 	function index() {
-		
+		$this->redirect('submitReview');
 	}
 
 	function submitReview() {
@@ -28,7 +29,7 @@ class SubmitController extends AppController {
 			
 		}
 		if (!empty($this->data) && isset($this->data['Submission'])) {
-			
+			if(isset($this->request->data['Submission']['source'])) return;
 			$expectedFields = [
 				'place_name','place_details','recommendation_level','experience_type_id','review'		  
 			];
