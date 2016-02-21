@@ -46,3 +46,5 @@ ALTER TABLE `companies` CHANGE `email_address` `email_address` TEXT CHARACTER SE
 
 
 ALTER TABLE `company_users` ADD `company_id` INT NOT NULL DEFAULT '0' AFTER `id`;
+
+ALTER TABLE `submissions` ADD `review` TEXT NULL AFTER `user_company_name`;

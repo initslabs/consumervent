@@ -1,11 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * IssueType Model
+ * SubmissionIssue Model
  *
- * @property SubmissionIssue $SubmissionIssue
+ * @property Submission $Submission
+ * @property IssueType $IssueType
  */
-class IssueType extends AppModel {
+class SubmissionIssue extends AppModel {
 
 /**
  * Validation rules
@@ -13,9 +14,9 @@ class IssueType extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+		'submission_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -23,7 +24,7 @@ class IssueType extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'sort_order' => array(
+		'issue_type_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -38,24 +39,24 @@ class IssueType extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * hasMany associations
+ * belongsTo associations
  *
  * @var array
  */
-	public $hasMany = array(
-		'SubmissionIssue' => array(
-			'className' => 'SubmissionIssue',
-			'foreignKey' => 'issue_type_id',
-			'dependent' => false,
+	public $belongsTo = array(
+		'Submission' => array(
+			'className' => 'Submission',
+			'foreignKey' => 'submission_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
+			'order' => ''
+		),
+		'IssueType' => array(
+			'className' => 'IssueType',
+			'foreignKey' => 'issue_type_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
-
 }

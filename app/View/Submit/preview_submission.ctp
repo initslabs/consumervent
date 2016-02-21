@@ -2,15 +2,114 @@
 	 <h3>Final Review</h3>
 	 We have included your contact details and name in the information we are sending to "COMPANY_NAME" but you can change that below if you do not want to reveal that to the company. Only your "DISPLAY NAME" will be publicly available on this site.
 </p>
+<?php echo $this->Form->create('Submission'); ?>
+<div class="row">
 
+	 <div class="col-md-7">
 
+		  <table class="table table-bordered table-striped">
+				<tr>
+					 <td>Business</td>
+					 <td><?php echo $submissionInfo['Company']['name']; ?></td>
+				</tr>
+				<tr>
+					 <td>
+						  Business Website</td>
+					 <td>
+						  <?php echo $this->Html->link($submissionInfo['Company']['website'], $submissionInfo['Company']['website'], ['target' => '_blank']); ?>
+					 </td>
+				</tr>
+				<tr>
+					 <td>
+						  Contact Email</td>
+					 <td>
+						  We found 
+						  <span class="label label-info">
+						 <?php
+						 $emailAddresses = explode(",",$submissionInfo['Company']['email_address']);
+						 echo count($emailAddresses);
+						 ?>
+						  </span> &nbsp;
+						 email address<?php echo count($emailAddresses)==1? '':'es'; ?> on file for this company.<br />
+						 <?php if(count($emailAddresses)){ ?>
+						 We will contact them using this information immediately
+						 <?php  } ?>
+					 </td>
+				</tr>
+				<tr>
+					 <td>
+						  How would you rate your experience with this business or service?
+					 </td>
+					 <td>
+						  <?php echo $submissionInfo['ExperienceType']['name']; ?>
+					 </td>
+				</tr>
 
+				<tr>
+					 <td>
+						  Do you have issues with the service/business you want to report?
+					 </td>
+					 <td>
+						<?php if(!$submissionIssues){ ?>
+						  - None - 
+						<?php }else{
+							foreach($submissionIssues as $issue){ ?>
+				<li><?php echo $issue['IssueType']['name']; ?></li>
+							<?php } ?>
+							<?php } ?>
+					 </td>
+				</tr>
+				<tr>
+					 <td colspan="2">
+						  Your Review<br />
+				<hr />
+				<div class="container-fluid">
+				<?php echo $submissionInfo['Submission']['review']; ?>
+				</div>
+				</td>
+				</tr>
 
-<p>
+				<tr>
+					 <th colspan="2">
+						  Submitted By
+					 </th>
+				</tr>
+				<tr>
+					 <td width="45%">Name Displayed</td>
+					 <td>
+						  <?php echo $this->Form->input('user_display_name', ['label' => false, 'class' => 'form-control']); ?>
+					 </td>
+				</tr>
+				<tr>
+					 <td>Contact Email (Only shown to company)</td>
+					 <td>
+						  <?php echo $this->Form->input('user_email_address', ['label' => false, 'class' => 'form-control']); ?>
+					 </td>
+				</tr>
+				<tr>
+					 <td>Contact Phone (Only shown to company)</td>
+					 <td>
+						  <?php echo $this->Form->input('user_phone_number', ['label' => false, 'class' => 'form-control']); ?>
+					 </td>
+				</tr>
+					 <tr>
+						  <td colspan="2">
+								Your submission of this report implies that you agree to the Terms of the Submission as displayed on this page
+						  </td>
+				</tr>
+					 <tr>
+						  <td colspan="2" class="text-right">
+							<?php echo $this->Form->submit('Submit', ['class' => 'btn btn-primary']); ?>
+						  </td>
+				</tr>
+		  </table>
+
+	 </div>
+		  <div class="col-md-5">
+		 <p>
 	 <strong>Terms of Submission</strong>
 <p>
 <div class="row">
-	 <div class="col-md-1"></div>
 	 <div class="col-md-10 text-justify">
 
 		  I certify that this Customer Review is my genuine opinion of this business and that I have no personal or business affiliation with this business, and have not been offered or received any incentive or compensation originating from the business to write this review. 
@@ -32,7 +131,14 @@
 		  </p>
 
 	 </div>
-	 	 <div class="col-md-1"></div>
+	 <div class="col-md-1"></div>
 
 </div>
+				
+	 </div>
+</div>
+
+<?php echo $this->Form->end(); ?>
+
+
 </div>
