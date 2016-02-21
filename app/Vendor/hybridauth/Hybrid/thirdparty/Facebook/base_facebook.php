@@ -881,7 +881,6 @@ abstract class BaseFacebook
       // @codeCoverageIgnoreStart
     }
     // @codeCoverageIgnoreEnd
-    var_dump($result);
 
     return $result;
   }
