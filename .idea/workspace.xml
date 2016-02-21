@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4ae302a0-0e4b-4081-8f45-b6c2c6935c1c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/DashboardController.php" afterPath="$PROJECT_DIR$/app/Controller/DashboardController.php" />
     </list>
     <ignored path="consumervent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="DashboardController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17695473">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.50617284">
+              <caret line="48" column="63" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <marker date="1456093440000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
                 <marker date="1456093440000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
@@ -442,7 +441,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456093369361</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="checking push from phpstorm">
+      <created>1456093455340</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1456093455340</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,8 +716,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17695473">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.50617284">
+          <caret line="48" column="63" selection-start-line="48" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <marker date="1456093440000" expanded="true" signature="1419:1508" placeholder="SELECT HOUR(... " />
             <marker date="1456093440000" expanded="true" signature="1509:1512" placeholder="SELECT CONCA... submissions" />
