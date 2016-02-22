@@ -9,7 +9,7 @@
                  data-image-src="<?php echo Router::url('/', true) ?>img/background.png"></div>
             <div class="header-content">
                 <h1> Get Your Voice Heard </h1>
-                <p>ConsumerVents helps amplify your positive reviews and complaints about a service, product or business. For companies.</p>
+                <p>ConsumerVents helps amplify your positive reviews and complaints about a service, product or business</p>
                 <!--                <a class="btn color-1 size-1 hover-1" ><i class="fa fa-facebook"></i>sign up via facebook</a>-->
                 <!--                <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>sign up now</a>-->
             </div>
@@ -88,12 +88,12 @@
             <div class="col-md-6 col-lg-offset-3">
                 <div class="text-center">
                     <h1 style="color: #728EAA;"> How it works </h1>
-                    <p style="font-size: 16px;" class="text-justify"> ConsumerVents helps amplify your positive reviews and complaints about a service, product or business. For companies, it's a centralized platform for receiving and responding to feedback and complaints from customers. Customers do not even need to know much more than the name of the business to submit a review and/or complaint.
+                    <p style="font-size: 16px;font-weight:100;" class="text-justify"> ConsumerVents helps amplify your positive reviews and complaints about a service, product or business. For companies, it's a centralized platform for receiving and responding to feedback and complaints from customers. Customers do not even need to know much more than the name of the business to submit a review and/or complaint.
                         Submissions are automatically sent to the company using contact information we find for the company.
 </p>
                         <br>
                         <br>
-                    <p style="font-size: 16px;" class="text-justify">
+                    <p style="font-size: 16px;font-weight:100;" class="text-justify">
                         And the company does not need to have an account to handle complaints  - we provide a secure link for accessing submissions directly from the email notifications set out. Companies can see submissoins, information on the customer as well as respond to them all from one single interface. Furthermore, ConsumerVents provides insights using graphical charts and displays into different trends relevant to the company  </p>
                 </div>
             </div>

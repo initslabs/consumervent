@@ -17,7 +17,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = 'ConsumerVent - Your Voice Amplified!';
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,7 +68,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="<?php echo $this->Html->url('/'); ?>"> Home </a></li>
 					<li><a href="<?php echo $this->Html->url('/Submit'); ?>"> Browse Submissions </a></li>
-					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;"> Submit Submissions </a></li>
+					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;">Submit a Review/Issue </a></li>
 					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
 <!--					<li class="user-login">-->
 <!--						<span>-->
