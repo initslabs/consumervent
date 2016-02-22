@@ -54,15 +54,36 @@ $radioAttributes = array(
 	 }
 
 </style>
+
+<div>
+	<div>
+		<div>
+			<div class="parallax-window"
+				 data-parallax="scroll"
+				 data-bleed="10"
+				 data-position="top"
+				 data-speed="0.2"
+				 data-image-src="<?php echo Router::url('/', true) ?>img/background3.png"></div>
+			<div class="header-content" style="    width: 80%;    padding: 102px 0px 0;">
+				<h1 class="h1"> Company/Service Information </h1>
+			</div>
+
+			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+
+			</div>
+			<div style="clear: both"></div>
+
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	 <h2>Submit Review</h2>
 	 <?php echo $this->Form->create('Submission'); ?>
 
 	 <div class="row">
-		  <div class="col-md-6">
-
-				<h3>Company/Service Information</h3>
-				&nbsp;
+		  <div class="col-md-7">
+			    &nbsp;
 				<?php echo $this->Form->input('place_name', ['class' => 'form-control', 'label' => 'Name of Service / Establishment & Location', 'type' => 'text', 'placeholder' => "Enter the name of the establishment and location", 'required', 'autocomplete' => "off", 'readonly']); ?>
 				&nbsp;
 				<?php echo $this->Form->input('place_website', ['class' => 'form-control', 'label' => 'Website of Establishment/Service/Product', 'type' => 'text', 'placeholder' => "Enter the website of the establishment if you know it", 'autocomplete' => "off"]); ?>
@@ -100,9 +121,9 @@ $radioAttributes = array(
 				<?php echo $this->Form->input('review', ['required', 'type' => 'textarea', 'class' => 'form-control', 'label' => 'Write your complaint or review']); ?>
 
 				<p>&nbsp;</p>
-				<?php echo $this->Form->submit('Next', ['class' => 'btn btn-primary']); ?>
+				<?php echo $this->Form->submit('Next', ['class' => 'btn btn-lg btn-primary next-btn']); ?>
 		  </div>
-		  <div class="col-md-1"></div>
+<!--		  <div class="col-md-1"></div>-->
 		  <div class="col-md-5">
 				<p>&nbsp;</p>
 
@@ -110,6 +131,10 @@ $radioAttributes = array(
 		  </div>
 	 </div>
 	 <?php echo $this->Form->end(); ?>
+	<br>
+	<br>
+	<br>
+	<br>
 </div>
 <script>
    // This example requires the Places library. Include the libraries=places

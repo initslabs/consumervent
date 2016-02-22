@@ -2,10 +2,6 @@
     font-family: "MagallanesBlack";
     src: url("../fonts/MagallanesBlack.otf") format("truetype");
 }
-@font-face {
-    font-family: "Palanquin";
-    src: url("../fonts/Palanquin/Palanquin-Bold.ttf") format("truetype"); }
-
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -57,9 +53,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     font-family: 'Palanquin', sans-serif;
     text-transform: uppercase;
-    text-shadow: 1px 1px #555;
+    /*text-shadow: 1px 1px #555;*/
     font-size: 13px;
     font-weight: 700;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #2A679B;
+    background-color: transparent;
 }
 
 .centered-form{
@@ -104,12 +105,12 @@ select.frecuency:focus {
 input.btn.btn-lg,
 input.btn.btn-lg:focus {
     outline: none;
-    width: 90%;
+    width: 89%;
     height: 60px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-button.btn {
+.search.btn {
     width: 10%;
     height: 60px;
     border-top-left-radius: 0;
@@ -161,7 +162,7 @@ button.btn {
 }
 
 .show-menu {
-    background-color: #3e4651 !important;
+    background-color: #728EAA !important;
     opacity: 0.8;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -284,4 +285,100 @@ footer {
     -ms-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.create {
+    font-family: "MagallanesBlack";
+    margin-top: 55px;
+    background: #728EAA;
+    color: #fff;
+    border-color: #728EAA;
+}
+
+.header-content .h1 {
+    font-size: 61px;
+    text-shadow: 1px 1px #CFCFCF;
+    color: #494E52;
+    font-family: "MagallanesBlack";
+}
+
+.next-btn {
+    width: 100%! important;
+    border-top-right-radius: 4px! important;
+    border-bottom-right-radius: 4px! important;
+    border-bottom-right-radius: 4px! important;
+    text-transform: uppercase;
+}
+
+.header-top {
+    background: url("../img/background3.png");
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 55px;
+}
+
+.p_header {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #6E8AA6;
+    border-color: #738A9F;
+}
+
+.ft_style {
+    font-weight: 200;
+    font-size: 12px;
+    color: #555;
+}
+
+.devider1:before {
+    background: url(../img/sperter1.png);
+    bottom: 0px;
+    content: "";
+    height: 3px;
+    left: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.more {
+    text-transform: uppercase;
+    font-weight: 100;
+    text-decoration: inherit;
+    font-size: 12px;
+}
+
+.name_style {
+    display: inline-block;
+    border: 1px solid #555;
+    padding: 5px 10px;
+    margin-bottom: 13px;
+    font-size: 10px;
+    border-radius: 1px;
+}
+
+.btn-lg.submit {
+    color: #fff;
+    font-family: 'Palanquin', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    text-align: center;
+    background: #2A679B;
+}
+
+.highcharts-container tspan {
+    font-family: "MagallanesBlack";
 }
