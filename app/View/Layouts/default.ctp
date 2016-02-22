@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 <div id="main-body-container">
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav id="header_navbar" class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -66,33 +66,20 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Link</a></li>
-
+					<li><a href="<?php echo $this->Html->url('/'); ?>"> Home </a></li>
+					<li><a href="<?php echo $this->Html->url('/Submit'); ?>"> Browse Submissions </a></li>
+					<li class="login"><a href="<?php echo $this->Html->url('/Submit/SubmitReview'); ?>" style=" background: #fff; margin-right: 10px;color: #2A679B;"> Submit Submissions </a></li>
 					<li class="login"><a href="<?php echo $this->Html->url('/Login'); ?>"> Log In </a></li>
-					<li class="user-login">
-						<span>
-							<img src="<?php echo Router::url('/', true) ?>img/customer-photo.jpg">
-						</span>
-						<a class="username dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Olatunde D. </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-
-					</li>
-
-<!--					<li class="dropdown">-->
-<!--						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
+<!--					<li class="user-login">-->
+<!--						<span>-->
+<!--							<img src="--><?php //echo Router::url('/', true) ?><!--img/customer-photo.jpg">-->
+<!--						</span>-->
+<!--						<a class="username dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Olatunde D. </a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a href="#"> Edit Account </a></li>-->
+<!--                            <li role="separator" class="divider"></li>-->
+<!--                            <li><a href="#"> Log Our </a></li>-->
+<!--                        </ul>-->
 <!--					</li>-->
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -103,19 +90,18 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 	</div>
-
     <footer id="footer-center" class="text-center bg-color1 dark-bg">
         <div class="container text-center">
-            <ul class="soc-list" style="
-    margin: 0px;
-    padding: 0;
-    margin-bottom: 32px;
-">
-                <li><a href="#" target="_blank"><i class="icon fa fa-google-plus"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-facebook"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-twitter"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-linkedin"></i></a></li>
-            </ul>
+<!--            <ul class="soc-list" style="-->
+<!--    margin: 0px;-->
+<!--    padding: 0;-->
+<!--    margin-bottom: 32px;-->
+<!--">-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-google-plus"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-facebook"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-twitter"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-linkedin"></i></a></li>-->
+<!--            </ul>-->
             <div>
                 <div>
                     <img src="<?php echo Router::url('/', true) ?>img/logo.fw.png" alt="ConsumerVent" style="width: 163px;opacity: 0.2;">
@@ -141,6 +127,7 @@ echo $this->fetch('script');
 
 <script>
 	$(window).load(function() {
+        var navHeight = $("#header_navbar").height();
 
 		$('.timer').counterUp({
 			delay: 20,
@@ -148,13 +135,15 @@ echo $this->fetch('script');
 		});
 
 		$(window).scroll(function () {
-			if ($(window).scrollTop() > $("nav").height()) {
-				$("nav.navbar-slide").addClass("show-menu");
+			if ($(window).scrollTop() > navHeight) {
+				$("#header_navbar").addClass("show-menu");
+//                console.log('added');
 			} else {
-				$("nav.navbar-slide").removeClass("show-menu");
-		//			$(".navbar-slide .navMenuCollapse").collapse({toggle: false});
-		//			$(".navbar-slide .navMenuCollapse").collapse("hide");
-		//			$(".navbar-slide .navbar-toggle").addClass("collapsed");
+				$("#header_navbar").removeClass("show-menu");
+//                console.log('removed');
+//		//			$(".navbar-slide .navMenuCollapse").collapse({toggle: false});
+//		//			$(".navbar-slide .navMenuCollapse").collapse("hide");
+//		//			$(".navbar-slide .navbar-toggle").addClass("collapsed");
 			}
 		});
 	});

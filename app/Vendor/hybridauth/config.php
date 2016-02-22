@@ -17,8 +17,6 @@ function url(){
 	);
 }
 
-
-
 return 
 	array(
 		"base_url" => url()."/hybridauth/",
