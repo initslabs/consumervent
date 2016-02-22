@@ -2,33 +2,38 @@
 //dd($real_data);
 ?>
 
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h3 style="font-size: 36px;"> Dashboard </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/highcharts-3d.js"></script>
 
+<div style="padding: 102px 0;">
+    <div class="container">
+        <div class="row" id="chart-one">
+            <div class="col-lg-6" id="chart-one"></div>
+            <div class="col-lg-6" id="chart-two"></div>
+        </div>
 
 
-<div class="container">
+        <div class="row" id="chart-two">
+            <div class="col-lg-6" id="chart-one"></div>
+            <div class="col-lg-6" id="chart-two"></div>
+        </div>
 
-    <div class="row" id="chart-one">
-        <div class="col-lg-6" id="chart-one"></div>
-        <div class="col-lg-6" id="chart-two"></div>
+        <div class="row">
+            <div class="col-lg-6"  id="chart-three"></div>
+            <div class="col-lg-6"  id="chart-four"></div>
+        </div>
     </div>
-
-
-    <div class="row" id="chart-two">
-        <div class="col-lg-6" id="chart-one"></div>
-        <div class="col-lg-6" id="chart-two"></div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-6"  id="chart-three"></div>
-        <div class="col-lg-6"  id="chart-four"></div>
-    </div>
-
-
-
-
 </div>
 
 

@@ -92,16 +92,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</div>
     <footer id="footer-center" class="text-center bg-color1 dark-bg">
         <div class="container text-center">
-            <ul class="soc-list" style="
-    margin: 0px;
-    padding: 0;
-    margin-bottom: 32px;
-">
-                <li><a href="#" target="_blank"><i class="icon fa fa-google-plus"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-facebook"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-twitter"></i></a></li>
-                <li><a href="#" target="_blank"><i class="icon fa fa-linkedin"></i></a></li>
-            </ul>
+<!--            <ul class="soc-list" style="-->
+<!--    margin: 0px;-->
+<!--    padding: 0;-->
+<!--    margin-bottom: 32px;-->
+<!--">-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-google-plus"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-facebook"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-twitter"></i></a></li>-->
+<!--                <li><a href="#" target="_blank"><i class="icon fa fa-linkedin"></i></a></li>-->
+<!--            </ul>-->
             <div>
                 <div>
                     <img src="<?php echo Router::url('/', true) ?>img/logo.fw.png" alt="ConsumerVent" style="width: 163px;opacity: 0.2;">

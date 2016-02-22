@@ -2,10 +2,6 @@
     font-family: "MagallanesBlack";
     src: url("../fonts/MagallanesBlack.otf") format("truetype");
 }
-@font-face {
-    font-family: "Palanquin";
-    src: url("../fonts/Palanquin/Palanquin-Bold.ttf") format("truetype"); }
-
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -370,7 +366,7 @@ footer {
     border-radius: 1px;
 }
 
-.submit {
+.btn-lg.submit {
     color: #fff;
     font-family: 'Palanquin', sans-serif;
     text-transform: uppercase;
@@ -381,4 +377,8 @@ footer {
     border: 1px solid #fff;
     text-align: center;
     background: #2A679B;
+}
+
+.highcharts-container tspan {
+    font-family: "MagallanesBlack";
 }

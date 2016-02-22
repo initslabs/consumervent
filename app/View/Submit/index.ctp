@@ -26,10 +26,10 @@
                 </div>
                 <?php foreach ($submissions as $submission) { ?>
                     <div class="row">
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-10">
+<!--                        <div class="col-md-2">-->
+<!---->
+<!--                        </div>-->
+                        <div class="col-md-12">
                             <div>
                                 <p class="more name_style"><?php echo $submission['Submission']['user_display_name']; ?></p>
                             </div>

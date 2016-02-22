@@ -9,8 +9,7 @@
                  data-image-src="<?php echo Router::url('/', true) ?>img/background.png"></div>
             <div class="header-content">
                 <h1> Get Your Voice Heard </h1>
-                <p>Conveniently engage cross functional internal or "organic" sources without virtual testing
-                    procedures. Appropriately actualize dynamic infrastructures.</p>
+                <p>ConsumerVents helps amplify your positive reviews and complaints about a service, product or business. For companies.</p>
                 <!--                <a class="btn color-1 size-1 hover-1" ><i class="fa fa-facebook"></i>sign up via facebook</a>-->
                 <!--                <a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>sign up now</a>-->
             </div>
@@ -34,9 +33,9 @@
                 <?php echo $this->Form->end(); ?>
                 <div>
                     <p class="pull-right" style="font-weight: 600;font-size: 14px;">
-                        <a href="<?php echo $this->Html->url('/Submit'); ?>" style="color: #fff;">Browse
-                            Submissions </a> |
-                        <a href="#" style="color: #fff;">Company/Organization Name Not Listed? </a>
+                        <a href="<?php echo $this->Html->url('/Submit'); ?>" style="color: #fff;">Browse Submissions </a>
+<!--                        |-->
+<!--                        <a href="#" style="color: #fff;">Company/Organization Name Not Listed? </a>-->
                     </p>
                     <div style="clear: both"></div>
                 </div>
@@ -58,19 +57,19 @@
                     <ul>
                         <li>
                             <p class="animated fadeInDown">
-                                <span class="timer">86</span>
+                                <span class="timer">36</span>
                                 <small>compliances</small>
                             </p>
                         </li>
                         <li>
                             <p class="animated fadeInDown">
-                                <span class="timer">234</span>
-                                <small>Followers</small>
+                                <span class="timer">14</span>
+                                <small>Users</small>
                             </p>
                         </li>
                         <li>
                             <p class="animated fadeInDown">
-                                <span class="timer">86</span>
+                                <span class="timer">26</span>
                                 <small>Responses</small>
                             </p>
                         </li>
@@ -85,17 +84,24 @@
 <div class="section">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
-                <div>
-                    <h1 style="color: #728EAA;"> Get To know how your Products & services can be better </h1>
-                    <p style="font-size: 16px;"> ConsumerVent gives company's a way to get to know how there services/product is doing in the open market. a chance for them to get answers from real user personally  </p>
-                </div>
-            </div>
-            <div class="col-md-5">
+            <div
+            <div class="col-md-6 col-lg-offset-3">
                 <div class="text-center">
-                    <a href="<?php echo $this->Html->url('/companies/add'); ?>" style="margin-top: 55px;" class="btn btn-default btn-lg create"> Create company Account </a>
+                    <h1 style="color: #728EAA;"> How it works </h1>
+                    <p style="font-size: 16px;" class="text-justify"> ConsumerVents helps amplify your positive reviews and complaints about a service, product or business. For companies, it's a centralized platform for receiving and responding to feedback and complaints from customers. Customers do not even need to know much more than the name of the business to submit a review and/or complaint.
+                        Submissions are automatically sent to the company using contact information we find for the company.
+</p>
+                        <br>
+                        <br>
+                    <p style="font-size: 16px;" class="text-justify">
+                        And the company does not need to have an account to handle complaints  - we provide a secure link for accessing submissions directly from the email notifications set out. Companies can see submissoins, information on the customer as well as respond to them all from one single interface. Furthermore, ConsumerVents provides insights using graphical charts and displays into different trends relevant to the company  </p>
                 </div>
             </div>
+<!--            <div class="col-md-5">-->
+<!--                <div class="text-center">-->
+<!--                    <a href="--><?php //echo $this->Html->url('/companies/add'); ?><!--" style="margin-top: 55px;" class="btn btn-default btn-lg create"> Create company Account </a>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     </div>
 </div>
